@@ -1,25 +1,16 @@
 <div class="h1 text-center">Course Listining</div>
 <div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">CS111: Intro Computer Science</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Intro Computer Science</h6>
-            <p class="card-text">Description: A thorough intro to computer Science</p>
-            <a href="#" class="card-link">Enroll</a>
-            <a href="#" class="card-link">Info</a>
-        </div>
+  <% Course.all.each do |c| %>
+    <div class="col-sm-6">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title"><%= c.short_name %>: <%= c.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= c.description %>></h6>
+              <a href="#" class="card-link">Enroll</a>
+              <a href="#" class="card-link">Info</a>
+          </div>
+      </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">CS112: Medium Computer Science</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Medium Computer Science</h6>
-            <p class="card-text">Description: A intermediate look at computer Science</p>
-            <a href="#" class="card-link">Enroll</a>
-            <a href="#" class="card-link">Info</a>
-        </div>
-    </div>
+    <% end %>
   </div>
 </div>
