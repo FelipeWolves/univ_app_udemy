@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Name: <%= @student.name %></h5>
+        <p>Email: <%= @student.email %></p>
+        <h6 class="card-subtitle mb-2 text-muted">Course enrollments</h6>
+        <h3>Curse enrollments</h3>
+        <div class="btn btn-secondary">
+            <%= link_to "Edit Your Profile", edit_student_path(@student), class: 'text-white' %>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>

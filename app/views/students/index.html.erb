@@ -1,0 +1,16 @@
+<div class="h1 text-center">Students Listining</div>
+<div class="row">
+  <% @students.each do |s| %>
+    <div class="col-sm-6">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Name: <%= s.name %></h5>
+              <p>Email: <%= s.email %></p>
+              <h6 class="card-subtitle mb-2 text-muted">Course enrollments</h6>
+              <a href="#" class="card-link">View Profile</a>
+          </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
