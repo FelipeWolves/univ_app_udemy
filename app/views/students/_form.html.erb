@@ -1,0 +1,23 @@
+<div class="container float-right">
+    <div class="card col-md-4 p-0 text-center">
+      <%= render 'shared/errors', r: @student %>
+        <div class="h1 sign-up-form"><%= @student.new_record? ? "Sigh Up" : "Edit your profile" %></div>
+        <div class="card-body">
+            <%= form_with model: @student, local: true do |s| %>
+            <div class="form-group text-center">
+                <%= s.label :name %>
+                <%= s.text_field :name, placeholder: "Enter Your name", autofocus: true %>
+                <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group text-center">
+                <%= s.label :email %>
+                <%= s.email_field :email, placeholder: "Enter Your email" %>
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <%= s.submit(@student.new_record? ? "Sigh Up" : "Save Changes", class: "btn btn-primary") %>
+        </div>
+        <% end %>
+    </div>
+</div>
+</div>
