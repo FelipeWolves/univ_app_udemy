@@ -1,6 +1,6 @@
 <div class="container float-right">
     <div class="card col-md-4 p-0 text-center">
-      <%= render 'shared/errors', r: @student %>
+        <%= render 'shared/errors', r: @student %>
         <div class="h1 sign-up-form"><%= @student.new_record? ? "Sigh Up" : "Edit your profile" %></div>
         <div class="card-body">
             <%= form_with model: @student, local: true do |s| %>
@@ -12,6 +12,14 @@
             <div class="form-group text-center">
                 <%= s.label :email %>
                 <%= s.email_field :email, placeholder: "Enter Your email" %>
+            </div>
+            <div class="form-group text-center">
+                <%= s.label :password %>
+                <%= s.password_field :password, placeholder: "Choose your password" %>
+            </div>
+            <div class="form-group text-center">
+                <%= s.label :password_confirmation %>
+                <%= s.password_field :password_confirmation, placeholder: "Confirm your password" %>
             </div>
         </div>
         <div class="card-footer text-center">

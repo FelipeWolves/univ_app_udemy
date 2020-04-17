@@ -1,0 +1,23 @@
+<div class="container float-right">
+    <div class="card col-md-4 p-0 text-center">
+        <div class="h1 sign-up-form">Log In</div>
+        <div class="card-body">
+            <%= form_with url: login_path do |s| %>
+            
+            <div class="form-group text-center">
+                <%= s.label :email %>
+                <%= s.email_field :email, placeholder: "Enter Your email", autofocus: true %>
+            </div>
+            <div class="form-group text-center">
+                <%= s.label :password %>
+                <%= s.password_field :password, placeholder: "Enter your password" %>
+            </div>
+            
+        </div>
+        <div class="card-footer text-center">
+            <%= s.submit "Log in", class: "btn btn-primary" %>
+        </div>
+        <% end %>
+    </div>
+
+</div>
